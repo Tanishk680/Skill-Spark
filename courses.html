@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSpark Courses | Explore Industry-Aligned Learning</title>
+    <meta name="description" content="Explore SkillSpark courses across tech, business, and communication with flexible learning paths built for real-world outcomes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Skill<span class="highlight">Spark</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html" class="active">Courses</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="teams.html">For Teams</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline" style="margin-right: 1rem; padding: 0.5rem 1rem;">Login</a>
+                <a href="login.html" class="btn btn-primary">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero courses-hero">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="container section-container">
+                <div class="section-header text-center max-w-md">
+                    <span class="sub-heading">Course Catalog</span>
+                    <h1 class="hero-title">Learn With <span class="highlight-text">Purpose</span></h1>
+                    <p class="hero-desc">Discover practical, industry-aligned courses designed to help learners build in-demand skills through focused lessons and project-based learning.</p>
+                </div>
+
+                <div class="courses-filter glass-panel">
+                    <div class="filter-heading">
+                        <h3>Filter Courses</h3>
+                        <p class="text-muted">UI only for now. This layout is ready for future filtering logic.</p>
+                    </div>
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option>All Categories</option>
+                                <option>Tech</option>
+                                <option>Business</option>
+                                <option>Communication</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="difficulty">Difficulty</label>
+                            <select id="difficulty" name="difficulty">
+                                <option>All Levels</option>
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="duration">Duration</label>
+                            <select id="duration" name="duration">
+                                <option>Any Duration</option>
+                                <option>2-4 Weeks</option>
+                                <option>4-8 Weeks</option>
+                                <option>8+ Weeks</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="search">Search</label>
+                            <input id="search" type="text" placeholder="Search course title">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-catalog">
+            <div class="container section-container">
+                <div class="section-header">
+                    <span class="sub-heading text-gradient">Featured Tracks</span>
+                    <h2>Explore Popular Learning Paths</h2>
+                    <p>Build skills in technology, business, and communication with hands-on, career-focused programs.</p>
+                </div>
+
+                <div class="courses-grid mt-5">
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-blue-soft">Tech</span>
+                            <span class="course-level">Beginner</span>
+                        </div>
+                        <h3>Frontend Web Development</h3>
+                        <p>Learn HTML, CSS, JavaScript, responsive design, and deployment through real product-style projects.</p>
+                        <div class="course-details">
+                            <span>Duration: 6 Weeks</span>
+                            <span>Level: Beginner</span>
+                        </div>
+                        <button class="btn btn-primary"><a href="course-detail.html">Enroll Now</a></button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-purple-soft">Tech</span>
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                        <h3>Data Analytics Essentials</h3>
+                        <p>Master spreadsheets, SQL, dashboards, and storytelling techniques for practical business analysis.</p>
+                        <div class="course-details">
+                            <span>Duration: 8 Weeks</span>
+                            <span>Level: Intermediate</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-green-soft">Business</span>
+                            <span class="course-level">Beginner</span>
+                        </div>
+                        <h3>Startup Foundations</h3>
+                        <p>Validate ideas, understand customers, and build a go-to-market plan for your first business venture.</p>
+                        <div class="course-details">
+                            <span>Duration: 4 Weeks</span>
+                            <span>Level: Beginner</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-orange-soft">Business</span>
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                        <h3>Digital Marketing Strategy</h3>
+                        <p>Plan campaigns, optimize funnels, and understand performance metrics across paid and organic channels.</p>
+                        <div class="course-details">
+                            <span>Duration: 5 Weeks</span>
+                            <span>Level: Intermediate</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-blue-soft">Communication</span>
+                            <span class="course-level">Beginner</span>
+                        </div>
+                        <h3>Professional Communication</h3>
+                        <p>Improve workplace writing, speaking confidence, and communication clarity for interviews and teams.</p>
+                        <div class="course-details">
+                            <span>Duration: 3 Weeks</span>
+                            <span>Level: Beginner</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-purple-soft">Communication</span>
+                            <span class="course-level">Advanced</span>
+                        </div>
+                        <h3>Leadership and Influence</h3>
+                        <p>Develop executive presence, feedback skills, and team leadership habits for high-impact collaboration.</p>
+                        <div class="course-details">
+                            <span>Duration: 7 Weeks</span>
+                            <span>Level: Advanced</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-green-soft">Tech</span>
+                            <span class="course-level">Advanced</span>
+                        </div>
+                        <h3>AI Tools for Productivity</h3>
+                        <p>Use modern AI workflows to research faster, automate repetitive tasks, and improve decision-making.</p>
+                        <div class="course-details">
+                            <span>Duration: 4 Weeks</span>
+                            <span>Level: Advanced</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-orange-soft">Business</span>
+                            <span class="course-level">Advanced</span>
+                        </div>
+                        <h3>Product Management Sprint</h3>
+                        <p>Learn product thinking, roadmapping, prioritization, and user research through practical case studies.</p>
+                        <div class="course-details">
+                            <span>Duration: 6 Weeks</span>
+                            <span>Level: Advanced</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+
+                    <article class="course-item glass-panel glow-hover">
+                        <div class="course-meta">
+                            <span class="course-pill bg-blue-soft">Communication</span>
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                        <h3>Public Speaking Lab</h3>
+                        <p>Practice presentation structure, voice control, and audience engagement with guided speaking exercises.</p>
+                        <div class="course-details">
+                            <span>Duration: 5 Weeks</span>
+                            <span>Level: Intermediate</span>
+                        </div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo mb-3 d-block">Skill<span class="highlight">Spark</span></a>
+                    <p class="mb-4">Empowering the next generation with practical skills for real-world success. Learn what matters with modern, job-ready courses.</p>
+                    <div class="contact-info">
+                        <a href="mailto:hello@skillspark.com">hello@skillspark.com</a>
+                        <a href="tel:+9118001234567">+91 1800-123-4567</a>
+                        <p>Bangalore, Karnataka, India</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="teams.html">For Teams</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Popular Topics</h4>
+                    <ul>
+                        <li><a href="courses.html">Web Development</a></li>
+                        <li><a href="courses.html">Data Analytics</a></li>
+                        <li><a href="courses.html">Digital Marketing</a></li>
+                        <li><a href="courses.html">Communication</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">About SkillSpark</a></li>
+                        <li><a href="index.html">Help Center</a></li>
+                        <li><a href="index.html">Community</a></li>
+                        <li><a href="index.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillSpark. All rights reserved.</p>
+                <p class="motto">"Don't just learn. Learn what matters."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

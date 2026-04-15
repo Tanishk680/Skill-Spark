@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSpark Sign Up | Start Your Learning Journey</title>
+    <meta name="description" content="Create your SkillSpark account and start learning practical, industry-aligned skills.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Skill<span class="highlight">Spark</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="teams.html">For Teams</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline" style="margin-right: 1rem; padding: 0.5rem 1rem;">Login</a>
+                <a href="signup.html" class="btn btn-primary">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="container section-container">
+            <div class="auth-layout">
+                <section class="auth-intro">
+                    <span class="sub-heading">Get Started</span>
+                    <h1>Create an account and start learning with purpose.</h1>
+                    <p>Join SkillSpark to access practical courses, build portfolio-ready projects, and grow with a structured learning path designed for modern careers.</p>
+
+                    <div class="auth-benefits">
+                        <div class="glass-panel auth-benefit">
+                            <strong>Practical Courses</strong>
+                            <span>Learn through focused lessons aligned with real industry needs.</span>
+                        </div>
+                        <div class="glass-panel auth-benefit">
+                            <strong>Project-Based Growth</strong>
+                            <span>Turn concepts into work you can showcase with confidence.</span>
+                        </div>
+                        <div class="glass-panel auth-benefit">
+                            <strong>Flexible Learning</strong>
+                            <span>Build momentum at your own pace with a clear path forward.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-panel auth-card">
+                    <h2>Create Your Account</h2>
+                    <p>Fill in your details to begin your SkillSpark journey.</p>
+
+                    <form class="auth-form" data-auth-form data-success-message="Signup validated successfully. This is a frontend-only demo.">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="signup-name">Full Name</label>
+                                <input id="signup-name" name="name" type="text" placeholder="Aarav Sharma" data-validate="required|name">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="signup-email">Email Address</label>
+                                <input id="signup-email" name="email" type="email" placeholder="you@example.com" data-validate="required|email">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="signup-password">Password</label>
+                                <input id="signup-password" name="password" type="password" placeholder="Create a password" data-validate="required|min6" data-password>
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="signup-confirm-password">Confirm Password</label>
+                                <input id="signup-confirm-password" name="confirmPassword" type="password" placeholder="Re-enter your password" data-validate="required|confirmPassword">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-field checkbox-field">
+                            <input id="signup-terms" name="terms" type="checkbox" data-validate="checked">
+                            <div class="checkbox-copy">
+                                <label for="signup-terms">I agree to the Terms of Service and Privacy Policy.</label>
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+                        </div>
+
+                        <p class="form-status" aria-live="polite"></p>
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+
+                    <p class="auth-switch">Already have an account? <a href="login.html">Sign in instead</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

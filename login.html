@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSpark Login | Continue Learning</title>
+    <meta name="description" content="Sign in to SkillSpark to continue your learning journey and access your practical courses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Skill<span class="highlight">Spark</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="teams.html">For Teams</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline" style="margin-right: 1rem; padding: 0.5rem 1rem;">Login</a>
+                <a href="signup.html" class="btn btn-primary">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="container section-container">
+            <div class="auth-layout">
+                <section class="auth-intro">
+                    <span class="sub-heading">Welcome Back</span>
+                    <h1>Sign in and keep building real-world skills.</h1>
+                    <p>Access your personalized learning journey, continue where you left off, and stay on track with hands-on lessons designed for career growth.</p>
+
+                    <div class="auth-benefits">
+                        <div class="glass-panel auth-benefit">
+                            <strong>Resume Your Courses</strong>
+                            <span>Pick up from your latest lesson, challenge, or project milestone.</span>
+                        </div>
+                        <div class="glass-panel auth-benefit">
+                            <strong>Track Progress Clearly</strong>
+                            <span>See your momentum across modules, skills, and learning goals.</span>
+                        </div>
+                        <div class="glass-panel auth-benefit">
+                            <strong>Stay Career-Focused</strong>
+                            <span>Learn through structured content built around practical outcomes.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-panel auth-card">
+                    <h2>Login to SkillSpark</h2>
+                    <p>Use your email and password to access your account.</p>
+
+                    <form class="auth-form" data-auth-form data-success-message="Login validated successfully. This is a frontend-only demo.">
+                        <div class="form-field">
+                            <label for="login-email">Email Address</label>
+                            <input id="login-email" name="email" type="email" placeholder="you@example.com" data-validate="required|email">
+                            <p class="field-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="login-password">Password</label>
+                            <input id="login-password" name="password" type="password" placeholder="Enter your password" data-validate="required|min6" data-password>
+                            <p class="field-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-meta">
+                            <span>Secure access for your SkillSpark account</span>
+                            <a href="forgot-password.html">Forgot password?</a>
+                        </div>
+
+                        <p class="form-status" aria-live="polite"></p>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+
+                    <p class="auth-switch">Don't have an account? <a href="signup.html">Create one here</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

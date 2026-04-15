@@ -36,15 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky Navbar Styling on Scroll
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 0';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            navbar.style.padding = '1rem 0';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.5rem 0';
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+            } else {
+                navbar.style.padding = '1rem 0';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    }
 
     // Number Counter Animation
     const stats = document.querySelectorAll('.stat-number');
@@ -114,4 +116,105 @@ document.addEventListener('DOMContentLoaded', () => {
     // Also observe the hero stats specifically for the number counter
     const heroStats = document.querySelector('.hero-stats');
     if(heroStats) observer.observe(heroStats);
+
+    const authForms = document.querySelectorAll('[data-auth-form]');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const setFieldError = (field, message) => {
+        const wrapper = field.closest('.form-field');
+        if (!wrapper) return;
+        const errorEl = wrapper.querySelector('.field-error');
+        wrapper.classList.add('has-error');
+        if (errorEl) errorEl.textContent = message;
+    };
+
+    const clearFieldError = (field) => {
+        const wrapper = field.closest('.form-field');
+        if (!wrapper) return;
+        const errorEl = wrapper.querySelector('.field-error');
+        wrapper.classList.remove('has-error');
+        if (errorEl) errorEl.textContent = '';
+    };
+
+    const validateField = (field, form) => {
+        const value = field.value.trim();
+        const rules = (field.dataset.validate || '').split('|').filter(Boolean);
+
+        clearFieldError(field);
+
+        for (const rule of rules) {
+            if (rule === 'required' && !value) {
+                setFieldError(field, 'This field is required.');
+                return false;
+            }
+
+            if (rule === 'email' && value && !emailPattern.test(value)) {
+                setFieldError(field, 'Enter a valid email address.');
+                return false;
+            }
+
+            if (rule === 'min6' && value.length < 6) {
+                setFieldError(field, 'Use at least 6 characters.');
+                return false;
+            }
+
+            if (rule === 'name' && value.length < 2) {
+                setFieldError(field, 'Enter your full name.');
+                return false;
+            }
+
+            if (rule === 'confirmPassword') {
+                const passwordField = form.querySelector('[data-password]');
+                if (!passwordField || value !== passwordField.value.trim()) {
+                    setFieldError(field, 'Passwords do not match.');
+                    return false;
+                }
+            }
+
+            if (rule === 'checked' && !field.checked) {
+                setFieldError(field, 'Please confirm to continue.');
+                return false;
+            }
+        }
+
+        return true;
+    };
+
+    authForms.forEach(form => {
+        const statusEl = form.querySelector('.form-status');
+        const fields = form.querySelectorAll('[data-validate]');
+
+        fields.forEach(field => {
+            const eventName = field.type === 'checkbox' ? 'change' : 'input';
+            field.addEventListener(eventName, () => {
+                validateField(field, form);
+            });
+        });
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            let isValid = true;
+            fields.forEach(field => {
+                if (!validateField(field, form)) {
+                    isValid = false;
+                }
+            });
+
+            if (!statusEl) return;
+
+            if (!isValid) {
+                statusEl.textContent = 'Please fix the highlighted fields and try again.';
+                statusEl.classList.add('is-error');
+                statusEl.classList.remove('is-success');
+                return;
+            }
+
+            statusEl.textContent = form.dataset.successMessage || 'Form submitted successfully.';
+            statusEl.classList.add('is-success');
+            statusEl.classList.remove('is-error');
+            form.reset();
+            fields.forEach(clearFieldError);
+        });
+    });
 });

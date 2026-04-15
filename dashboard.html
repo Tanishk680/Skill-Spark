@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSpark Dashboard | Your Learning Hub</title>
+    <meta name="description" content="View your SkillSpark dashboard with courses, progress, certificates, and profile details.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Skill<span class="highlight">Spark</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="teams.html">For Teams</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline" style="margin-right: 1rem; padding: 0.5rem 1rem;">Login</a>
+                <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="container section-container">
+            <div class="dashboard-layout">
+                <aside class="glass-panel dashboard-sidebar">
+                    <div class="dashboard-user">
+                        <div class="dashboard-avatar" aria-hidden="true">AS</div>
+                        <div>
+                            <h2>Aarav Sharma</h2>
+                            <p>Frontend Learner</p>
+                        </div>
+                    </div>
+
+                    <nav class="dashboard-nav" aria-label="Dashboard sections">
+                        <a href="#my-courses" class="dashboard-nav-link active">My Courses</a>
+                        <a href="#progress" class="dashboard-nav-link">Progress</a>
+                        <a href="#certificates" class="dashboard-nav-link">Certificates</a>
+                        <a href="#profile" class="dashboard-nav-link">Profile</a>
+                    </nav>
+
+                    <div class="dashboard-sidebar-note">
+                        <strong>Weekly Goal</strong>
+                        <p>Complete 3 lessons and finish 1 project milestone this week.</p>
+                    </div>
+                </aside>
+
+                <section class="dashboard-content">
+                    <div class="dashboard-hero glass-panel">
+                        <span class="sub-heading">Learner Dashboard</span>
+                        <h1>Welcome back, Aarav.</h1>
+                        <p>Your progress is looking strong this week. Keep building momentum across your active learning paths.</p>
+
+                        <div class="dashboard-stats">
+                            <div class="dashboard-stat">
+                                <strong>4</strong>
+                                <span>Active Courses</span>
+                            </div>
+                            <div class="dashboard-stat">
+                                <strong>78%</strong>
+                                <span>Average Progress</span>
+                            </div>
+                            <div class="dashboard-stat">
+                                <strong>3</strong>
+                                <span>Certificates Earned</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="my-courses" class="glass-panel dashboard-section">
+                        <div class="dashboard-section-head">
+                            <div>
+                                <span class="sub-heading">My Courses</span>
+                                <h2>Current Learning Paths</h2>
+                            </div>
+                            <a href="courses.html" class="btn btn-outline">Browse More</a>
+                        </div>
+
+                        <div class="dashboard-course-grid">
+                            <article class="dashboard-course-card">
+                                <div class="course-meta">
+                                    <span class="course-pill bg-blue-soft">Tech</span>
+                                    <span class="course-level">78% Complete</span>
+                                </div>
+                                <h3>Frontend Web Development</h3>
+                                <p>Continue building responsive layouts and JavaScript interactions for your capstone project.</p>
+                                <div class="progress-track"><span style="width: 78%;"></span></div>
+                            </article>
+
+                            <article class="dashboard-course-card">
+                                <div class="course-meta">
+                                    <span class="course-pill bg-orange-soft">Business</span>
+                                    <span class="course-level">61% Complete</span>
+                                </div>
+                                <h3>Product Management Sprint</h3>
+                                <p>Work through prioritization frameworks, roadmapping, and user story planning.</p>
+                                <div class="progress-track"><span style="width: 61%;"></span></div>
+                            </article>
+
+                            <article class="dashboard-course-card">
+                                <div class="course-meta">
+                                    <span class="course-pill bg-purple-soft">Communication</span>
+                                    <span class="course-level">84% Complete</span>
+                                </div>
+                                <h3>Public Speaking Lab</h3>
+                                <p>Refine presentation structure, voice modulation, and audience engagement.</p>
+                                <div class="progress-track"><span style="width: 84%;"></span></div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="progress" class="glass-panel dashboard-section">
+                        <div class="dashboard-section-head">
+                            <div>
+                                <span class="sub-heading">Progress</span>
+                                <h2>Skill Momentum</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-metrics">
+                            <div class="metric-card">
+                                <strong>18</strong>
+                                <span>Lessons Completed</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>42 hrs</strong>
+                                <span>Learning Time</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>7</strong>
+                                <span>Projects Submitted</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-list">
+                            <div class="progress-row">
+                                <div>
+                                    <h3>HTML & CSS Foundations</h3>
+                                    <p>Core page structure and visual systems</p>
+                                </div>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-track"><span style="width: 92%;"></span></div>
+
+                            <div class="progress-row">
+                                <div>
+                                    <h3>JavaScript Interactivity</h3>
+                                    <p>DOM logic, forms, and dynamic components</p>
+                                </div>
+                                <span>74%</span>
+                            </div>
+                            <div class="progress-track"><span style="width: 74%;"></span></div>
+
+                            <div class="progress-row">
+                                <div>
+                                    <h3>Presentation & Speaking</h3>
+                                    <p>Confidence, storytelling, and delivery</p>
+                                </div>
+                                <span>81%</span>
+                            </div>
+                            <div class="progress-track"><span style="width: 81%;"></span></div>
+                        </div>
+                    </section>
+
+                    <section id="certificates" class="glass-panel dashboard-section">
+                        <div class="dashboard-section-head">
+                            <div>
+                                <span class="sub-heading">Certificates</span>
+                                <h2>Achievements Unlocked</h2>
+                            </div>
+                        </div>
+
+                        <div class="certificate-grid">
+                            <article class="certificate-card">
+                                <h3>Digital Marketing Essentials</h3>
+                                <p>Issued on 12 March 2026</p>
+                                <span>Credential ID: SS-DM-2048</span>
+                            </article>
+                            <article class="certificate-card">
+                                <h3>Professional Communication</h3>
+                                <p>Issued on 28 February 2026</p>
+                                <span>Credential ID: SS-PC-1824</span>
+                            </article>
+                            <article class="certificate-card">
+                                <h3>Startup Foundations</h3>
+                                <p>Issued on 10 January 2026</p>
+                                <span>Credential ID: SS-SF-1463</span>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="profile" class="glass-panel dashboard-section">
+                        <div class="dashboard-section-head">
+                            <div>
+                                <span class="sub-heading">Profile</span>
+                                <h2>Learner Details</h2>
+                            </div>
+                        </div>
+
+                        <div class="profile-grid">
+                            <div class="profile-item">
+                                <span>Full Name</span>
+                                <strong>Aarav Sharma</strong>
+                            </div>
+                            <div class="profile-item">
+                                <span>Email</span>
+                                <strong>aarav.sharma@example.com</strong>
+                            </div>
+                            <div class="profile-item">
+                                <span>Career Goal</span>
+                                <strong>Frontend Developer</strong>
+                            </div>
+                            <div class="profile-item">
+                                <span>Preferred Learning Time</span>
+                                <strong>Evenings, 30 mins/day</strong>
+                            </div>
+                            <div class="profile-item">
+                                <span>Location</span>
+                                <strong>Bangalore, India</strong>
+                            </div>
+                            <div class="profile-item">
+                                <span>Member Since</span>
+                                <strong>January 2026</strong>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
